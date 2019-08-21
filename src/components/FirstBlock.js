@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../index.css'
 
 class FirstBlock extends React.Component {
 
@@ -8,7 +8,7 @@ class FirstBlock extends React.Component {
         return(
            <div className ='firstBlock'>
                 <div className="PcityName">
-                    <div className = 'cityName'></div>
+                    <div className = 'cityName'>Санкт-Петербург</div>
                 </div>
                 <div className = 'weather'>
                     <div className="temp">{`${plusTemp}${this.props.temp}${String.fromCharCode(176)}`}</div>

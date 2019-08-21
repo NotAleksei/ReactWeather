@@ -2,6 +2,7 @@ import React from 'react';
 import './City';
 import './App.css';
 import City from './City';
+import '../index.css'
 
 class App extends React.Component {
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import FirstBlock from './FirstBlock';
 import SecondBlock from './SecondBlock';
+import '../index.css'
 
 class City extends React.Component {
 

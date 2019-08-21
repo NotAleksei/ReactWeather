@@ -1,13 +1,168 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab::400,200,300,700&display=swap&subset=cyrillic');
+
+#Spb{
+    position: relative;
+    top:100px;
+    left:100px;
+    width: 280px;
+    height: 130px;
+    border: 1px solid black;
+    float: left;
+ 
+}
+/* #Spb:hover{
+    position: relative;
+    width: 280px;  
+} */
+#Moscow{
+    position: relative;
+    top:100px;
+    left:100px;
+    width: 150px;
+    height: 130px;
+    border: 1px solid black;
+    border-left: 0px;
+    float: left;
+ 
+}
+#Moscow:hover{
+    position: relative;
+    width: 280px;  
+}
+#Moscow:hover .secondBlock{
+    position: relative;
+    top:35px;
+    height: 95px;
+    width: 280px;  
+    visibility: visible;
+}
+#Moscow:hover {
+    position: relative;
+    width: 280px;  
+}
+#Kazan{
+    position: relative;
+    top:100px;
+    left:100px;
+    width: 150px;
+    height: 130px;
+    border: 1px solid black;
+    border-left: 0px;
+    float: left;
+ 
+}
+#Kazan:hover{
+    position: relative;
+    width: 280px;  
+}
+#Kazan:hover .secondBlock{
+    position: relative;
+    top:35px;
+    height: 95px;
+    width: 280px;  
+    visibility: visible;
+}
+#Kazan:hover {
+    position: relative;
+    width: 280px;  
+}
+#Vladivostok{
+    position: relative;
+    top:100px;
+    left:100px;
+    width: 150px;
+    height: 130px;
+    border: 1px solid black;
+    border-left: 0px;
+    float: left;
+ 
+}
+#Vladivostok:hover .secondBlock{
+    position: relative;
+    top:35px;
+    height: 95px;
+    width: 280px;  
+    visibility: visible;
+}
+#Vladivostok:hover {
+    position: relative;
+    width: 280px;  
+}
+.PcityName{
+    position: relative;
+    width: 150px;
+}
+.cityName{
+    color: black;
+    font-family: 'Roboto Slab';
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    top:10px;
+    margin-bottom: 10px;
+    text-align:center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.weather{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+}
+.temp{
+    position: relative;
+    display: inline;
+    color: black;
+    font-size: 36px;
+    font-family: 'Roboto Slab';
+    font-weight: 200;
+}
+.typeOfWeather{
+    position: relative;
+    display: inline;
+    top: 10px;
+    left: 8px;
+}
+.PweatherTxt{
+    position: relative;
+    width: 150px;
+}
+.weatherTxt{
+    color: black;
+    font-family: 'Roboto Slab';
+    font-weight: 300;
+    font-size: 18px;
+    position: relative;
+    top:3px;
+    text-align:center;
+}
+.secondBlock{
+    position: relative;
+    font-family: 'Roboto Slab';
+    font-weight: 300;
+    font-size: 14px;
+    position: relative;
+    top:35px;
+    height: 130px;
+    width: 150px;
+    visibility: hidden;
+}
+#secondBlockSpb{
+    position: relative;
+    font-family: 'Roboto Slab';
+    font-weight: 300;
+    font-size: 14px;
+    position: relative;
+    top:35px;
+}
+.firstBlock{
+    float:left;
+}
+
+.wind{
+    margin-bottom: 5px;
+}
+
+.humidity{
+    margin-top: 5px;
 }
