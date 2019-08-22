@@ -1,14 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab::400,200,300,700&display=swap&subset=cyrillic');
 
+#mouse {
+    display: inline-block;
+}
+#showSecond{
+    display: inline; 
+}
+body {
+  background: url(img/background.jpg) no-repeat;
+  background-size: 100%
+}
+
+#main{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
 #Spb{
     position: relative;
-    top:100px;
-    left:100px;
     width: 280px;
     height: 130px;
-    border: 1px solid black;
+    border: 1px solid grey;
     float: left;
- 
 }
 /* #Spb:hover{
     position: relative;
@@ -16,14 +33,11 @@
 } */
 #Moscow{
     position: relative;
-    top:100px;
-    left:100px;
     width: 150px;
     height: 130px;
-    border: 1px solid black;
+    border: 1px solid grey;
     border-left: 0px;
     float: left;
- 
 }
 #Moscow:hover{
     position: relative;
@@ -42,11 +56,9 @@
 }
 #Kazan{
     position: relative;
-    top:100px;
-    left:100px;
     width: 150px;
     height: 130px;
-    border: 1px solid black;
+    border: 1px solid grey;
     border-left: 0px;
     float: left;
  
@@ -68,11 +80,9 @@
 }
 #Vladivostok{
     position: relative;
-    top:100px;
-    left:100px;
     width: 150px;
     height: 130px;
-    border: 1px solid black;
+    border: 1px solid grey;
     border-left: 0px;
     float: left;
  
@@ -152,7 +162,6 @@
     font-family: 'Roboto Slab';
     font-weight: 300;
     font-size: 14px;
-    position: relative;
     top:35px;
 }
 .firstBlock{

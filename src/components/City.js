@@ -30,6 +30,7 @@ class City extends React.Component {
         let cityName;
         let secondBlockClass;
         let cityNameRU;
+        let windDeg;
         
         if(id === '498817'){
             cityName = 'Spb';
@@ -86,6 +87,29 @@ class City extends React.Component {
           setWeatherRU = 'туман';
           setSrcImg = require('../img/Atmosphere.png');
         };
+
+
+        if((getWindDeg >=0 && getWindDeg < 23) || (getWindDeg > 316 && getWindDeg < 359) || (getWindDeg === 360)) {
+            windDeg = 'В';
+          } else if((getWindDeg >=23) && (getWindDeg <= 68)){
+            windDeg = 'СВ';
+          } else if((getWindDeg >68) && (getWindDeg < 113)){
+            windDeg = 'С';
+          } else if((getWindDeg) >=113 && (getWindDeg <= 158)){
+            windDeg = 'СЗ';
+          }  else if((getWindDeg >158) && (getWindDeg < 203)){
+            windDeg = 'З';
+          } else if((getWindDeg >=203) && (getWindDeg <= 248)){
+            windDeg = 'ЮЗ';
+          } else if((getWindDeg > 248) && (getWindDeg < 293)){
+            windDeg = 'Ю';
+          } else if((getWindDeg >=293) && (getWindDeg <= 316)){
+            windDeg = 'ЮВ';
+          };
+
+          if (getWindDeg === undefined) {
+            windDeg = '';
+          }
     
     
         this.setState ({
@@ -93,7 +117,7 @@ class City extends React.Component {
           sunrise: getDateSunrise,
           sunset: getDateSunset,
           windSpeed: getWindSpeed,
-          windDeg: getWindDeg,
+          windDeg: windDeg,
           pressure: getPressure,
           humidity: getHumidity,
           weatherName: getWeatherName,
@@ -104,38 +128,40 @@ class City extends React.Component {
           cityNameRU: cityNameRU,
           secondBlockClass: secondBlockClass
         })
-        
-      };
 
+      };
+    
       componentDidMount() {
         this.getWeather(this.props.id);
+        this.intervalId = setInterval(() => this.getWeather(this.props.id), 30000);
       }
     
 
     render(){
         return(
-            <div id = {`${this.state.cityName}`}>
-                <div className='showSub'>
-                   <FirstBlock 
-                        temp = {this.state.temp} 
-                        weatherName = {this.state.weatherName} 
-                        weatherID = {this.state.weatherID} 
-                        srcImg = {this.state.srcImg}
-                        weatherRU = {this.state.weatherRU}
-                        cityName = {this.state.cityName}
-                        cityNameRU = {this.state.cityNameRU}
-                   /> 
-                   <SecondBlock 
-                          windSpeed = {this.state.windSpeed}
-                          windDeg = {this.state.windDeg}
-                          pressure = {this.state.pressure}
-                          humidity = {this.state.humidity}
-                          secondBlockClass = {this.state.secondBlockClass}/>
-                </div>
+            <div id = {`${this.state.cityName}`} style = {{width: `${this.props.width}px`}}>
+              <FirstBlock 
+                   temp = {this.state.temp} 
+                   weatherName = {this.state.weatherName} 
+                   weatherID = {this.state.weatherID} 
+                   srcImg = {this.state.srcImg}
+                   weatherRU = {this.state.weatherRU}
+                   cityName = {this.state.cityName}
+                   cityNameRU = {this.state.cityNameRU}
+              /> 
+              <div id = 'showSecond' style = {{visibility: this.props.visibility}}>
+                <SecondBlock 
+                   windSpeed = {this.state.windSpeed}
+                   windDeg = {this.state.windDeg}
+                   pressure = {this.state.pressure}
+                   humidity = {this.state.humidity}
+                   secondBlockClass = {this.state.secondBlockClass}
+                />
+               </div>
             </div>
         )
     }
-}
+};
 
 
 export default City
