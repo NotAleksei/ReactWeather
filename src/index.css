@@ -3,9 +3,11 @@
 #mouse {
     display: inline-block;
 }
+
 #showSecond{
     display: inline; 
 }
+
 body {
   background: url(img/background.jpg) no-repeat;
   background-size: 100%
@@ -27,10 +29,7 @@ body {
     border: 1px solid grey;
     float: left;
 }
-/* #Spb:hover{
-    position: relative;
-    width: 280px;  
-} */
+
 #Moscow{
     position: relative;
     width: 150px;
