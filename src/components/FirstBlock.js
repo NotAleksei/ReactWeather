@@ -2,7 +2,7 @@ import React from 'react'
 
 
 function FirstBlock(props) {
-    const plusTemp = props.temp > 0 && '+';
+    const plusTemp = props.temp > 0 && '+' || '';
         return(
            <div className ='firstBlock'>
                 <div className="PcityName">
